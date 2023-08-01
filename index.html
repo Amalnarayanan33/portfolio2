@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PORTFOLIO WEBSITE</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/395838e603.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+<div id="header">
+    <div class="container">
+        <nav>  
+            <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="page1.html">Services</a></li>
+            <li> <a href="page2.html">portfolio</a></li>
+            <li> <a href="page3.html">Contact</a></li>   
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Amal Narayanan</span></h1>
+            <p>Consultant</p>
+        </div>
+    </div>
+</div>
+<!-----------about--------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/b2.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a versatile professional with a unique blend of skills and expertise in the fields of analysis, financial consulting/advising, and development. With a passion for leveraging data-driven insights, optimizing financial strategies, and creating innovative solutions, I strive to make a meaningful impact in the business world.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Consultant</span><br>Financial Expertise and Advisory Services.</li>
+                        <li><span>Data Analyst</span><br>Insightful data-driven decision maker.</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Freelance consultant</span><br>Freelance financial consultant for past 2 years.</li>
+                        <li><span>Data Analyst</span><br>Data analyst for 4 years.</li>
+                        <li><span>Web Developer</span><br>worked as web developer in between this years</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Masters in Msc Computer Science with Data Analytics</span><br>Post graduate in cs.</li>
+                        <li><span>Bachelor in Mathematics</span><br>Degree in Mathematics.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+         for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link")
+         document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right ="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px"
+    }
+</script>
+</body>
+</html>
